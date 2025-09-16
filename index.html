@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>QR Menü — 16 Adet Premium PHP Script Paketi — Sadece 1.000 TL | Dev Kampanya</title>
+  <meta name="description" content="Lisans yok, tamamen açık kaynak 16 adet Premium QR Menü scripti. Restoran, kafe ve yiyecek-içecek işletmeleri için modern, hızlı ve ölçeklenebilir tema paketi — sadece 1.000 TL." />
+  <meta name="keywords" content="qr menü, restoran menü script, kafe menü, qr menu php, açık kaynak script, lisanssız, tema paketi, menü sistemi" />
+
+  <link rel="canonical" href="https://mebularts.github.io/QR-Menu-16-Pack/" />
+
+  <link rel="icon" type="image/x-icon" href="https://mebularts.com.tr/public/images/media/1663876743MBLogoBeyaz.jpg">
+  <link rel="apple-touch-icon" href="https://mebularts.com.tr/public/images/media/1663876743MBLogoBeyaz.jpg">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="product" />
+  <meta property="og:title" content="QR Menü — 16 Adet Premium PHP Script — 1.000 TL" />
+  <meta property="og:description" content="Restoran & kafe odaklı 16 adet QR Menü teması. Lisans yok, sınırsız kullanım. Sınırlı süreli kampanya!" />
+  <meta property="og:image" content="https://mebularts.github.io/QR-Menu-16-Pack/assets/og-qrmenu-16.png" />
+  <meta property="og:url" content="https://mebularts.github.io/QR-Menu-16-Pack/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: { DEFAULT: '#0b0f0f', 800:'#0f1414', 700:'#131a1a', 600:'#192121' },
+            brand: {
+              DEFAULT:'#FBA026',
+              50:'#FFF4E5',100:'#FFE4BF',200:'#FFD08F',300:'#FFB55A',
+              400:'#FFA335',500:'#FBA026',600:'#E08F20',700:'#B8711A',800:'#8F5714',900:'#6E420F'
+            }
+          },
+          boxShadow: { glow: '0 0 0 3px rgba(251,160,38,0.3), 0 0 40px rgba(251,160,38,0.15)' }
+        }
+      }
+    }
+  </script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <style>
+    :root { --bg:#0b0f0f; --bg-soft:#111616; --text:#f4f4f4; --muted:#b8b8b8; --brand:#FBA026; --brand-rgb:251,160,38; }
+    html, body { background:var(--bg); color:var(--text); font-family:'Inter',system-ui,-apple-system, Segoe UI, Roboto, Ubuntu,'Helvetica Neue',Arial,'Noto Sans','Apple Color Emoji','Segoe UI Emoji'; }
+    .glass { backdrop-filter: blur(8px); background: rgba(25,33,33,.65); }
+    .grid-auto { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1rem; }
+    .container-xl { max-width: 1200px; }
+    .badge-soft { background: rgba(var(--brand-rgb),.12); color: var(--brand); border:1px solid rgba(var(--brand-rgb),.28); }
+    .btn-brand { background:var(--brand); color:#1b0d00; font-weight:700; }
+    .btn-brand:hover { filter:brightness(1.06); color:#1b0d00; box-shadow:0 0 0 .25rem rgba(var(--brand-rgb),.28); }
+    .btn-outline-brand { border:1px solid var(--brand); color:var(--brand); }
+    .btn-outline-brand:hover { background:var(--brand); color:#1b0d00; }
+    .hero-gradient {
+      background:
+        radial-gradient(80% 120% at 50% -10%, rgba(var(--brand-rgb),.22), rgba(11,15,15,0) 50%),
+        radial-gradient(60% 90% at 90% 10%, rgba(var(--brand-rgb),.12), rgba(11,15,15,0) 45%);
+    }
+    .shadow-brand { box-shadow:0 10px 40px rgba(var(--brand-rgb),.12); }
+    .mark-brand { background:linear-gradient(90deg, rgba(var(--brand-rgb),.18), rgba(var(--brand-rgb),.06)); padding:.15rem .4rem; border-radius:.35rem; }
+    .list-check li { padding-left:1.75rem; position:relative; margin-bottom:.5rem; }
+    .list-check li::before { content:'\F26E'; font-family:"bootstrap-icons"; position:absolute; left:0; color:var(--brand); }
+    .divider { height:1px; background:linear-gradient(90deg, rgba(255,255,255,.06), rgba(var(--brand-rgb),.45), rgba(255,255,255,.06)); }
+    .sticky-fab { position:fixed; right:16px; bottom:16px; display:flex; flex-direction:column; gap:10px; z-index:9999; }
+    .fab { width:52px; height:52px; border-radius:999px; display:flex; align-items:center; justify-content:center; background:#141b1b; border:1px solid rgba(var(--brand-rgb),.35); box-shadow:0 6px 24px rgba(0,0,0,.35); }
+    .fab:hover { transform:translateY(-2px); box-shadow:0 12px 32px rgba(0,0,0,.45); }
+    .fab i { font-size:1.35rem; color:var(--brand); }
+    .scrn { width:100%; height:auto; object-fit:cover; border:1px solid rgba(255,255,255,.06); border-radius:12px; }
+    .thumb { cursor: zoom-in; }
+    .modal-dark .modal-content { background:#0f1414; border:1px solid rgba(255,255,255,.08); }
+    .table-dark th, .table-dark td { border-color: rgba(255,255,255,.08); }
+    .seo-visually-hidden{ position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .kicker { letter-spacing:.18em; font-weight:700; color:var(--brand); text-transform:uppercase; font-size:.8rem; }
+  </style>
+</head>
+<body class="antialiased selection:bg-brand/20 selection:text-white">
+  <a class="seo-visually-hidden" href="#icerik">İçeriğe atla</a>
+
+  <div class="sticky-fab" aria-label="Hızlı iletişim kısayolları">
+    <a class="fab" href="https://wa.me/12513160268?text=Merhaba%2C%2016%20Adet%20Premium%20QR%20Men%C3%BC%20Paketini%20(1.000%20TL)%20incelemek%20istiyorum" target="_blank" rel="nofollow noopener" aria-label="WhatsApp ile yaz">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+    <a class="fab" href="https://t.me/mebularts" target="_blank" rel="nofollow noopener" aria-label="Telegram ile yaz">
+      <i class="bi bi-telegram"></i>
+    </a>
+  </div>
+
+  <header class="sticky top-0 z-40 glass border-b border-white/10">
+    <nav class="container-xl mx-auto flex items-center justify-between py-3 px-4">
+      <a href="#" class="flex items-center gap-2" aria-label="Anasayfa">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-md bg-brand/20 text-brand shadow-glow">
+          <i class="bi bi-layers-fill"></i>
+        </span>
+        <span class="font-extrabold tracking-tight">QR Menü 16'lı Paket</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+        <a href="#paket" class="hover:text-white">Paket İçeriği</a>
+        <a href="#demolar" class="hover:text-white">Demolar</a>
+        <a href="#sss" class="hover:text-white">SSS</a>
+        <a href="#satin-al" class="hover:text-white">Satın Al</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="#satin-al" class="btn btn-brand rounded-pill px-3 py-2 text-sm">Hemen Satın Al</a>
+        <a href="https://wa.me/12513160268" class="btn btn-outline-brand rounded-pill px-3 py-2 text-sm" target="_blank" rel="nofollow noopener"><i class="bi bi-whatsapp me-1"></i>Sor</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero-gradient" id="icerik">
+    <div class="container-xl mx-auto px-4 py-16 md:py-24">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="kicker">DEV KAMPANYA</p>
+          <h1 class="mt-3 text-4xl md:text-5xl font-extrabold leading-tight">
+            <span class="text-white">16 Adet Premium PHP Script</span>
+            <span class="block mt-1 text-brand">Sadece 1.000 TL</span>
+          </h1>
+          <p class="mt-4 text-lg text-gray-300">
+            Lisans yok, tamamen açık kaynak. Restoran & Kafe odaklı
+            <span class="mark-brand">QR Menü</span> temaları tek pakette.
+            İster kendi markana göre özelleştir, ister müşterine sat.
+          </p>
+          <ul class="list-check mt-5 text-gray-300">
+            <li>Yüksek değer: Parça alımda 16.000₺+ eşdeğer</li>
+            <li>Hızlı başlangıç: README + örnek config</li>
+            <li>Özelleştirilebilir: Açık kaynak, sınırsız proje</li>
+          </ul>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#satin-al" class="btn btn-brand btn-lg rounded-pill shadow-brand">Hemen Satın Al</a>
+            <a href="#paket" class="btn btn-outline-brand rounded-pill">Paket İçeriğine Bak</a>
+          </div>
+          <div class="mt-6 flex flex-wrap items-center gap-4 text-sm text-gray-400">
+            <span class="badge badge-soft rounded px-3 py-1"><i class="bi bi-unlock me-2"></i>Lisans yok</span>
+            <span class="badge badge-soft rounded px-3 py-1"><i class="bi bi-stars me-2"></i>Açık kaynak</span>
+            <span class="badge badge-soft rounded px-3 py-1"><i class="bi bi-rocket-takeoff me-2"></i>Ajans & Freelancer uyumlu</span>
+          </div>
+          <p class="text-xs text-gray-400 mt-2">Görsellerle demolar arasında tema farkları olabilir; lütfen demoları inceleyin.</p>
+        </div>
+        <div>
+          <div class="rounded-2xl border border-white/10 bg-gradient-to-b from-dark-600 to-dark-800 p-4 shadow-brand hero-card">
+            <div class="rounded-xl overflow-hidden border border-white/10">
+              <img class="w-full scrn" src="assets/hero-qrmenu.png" alt="QR Menü 16'lı paket örnek ekran görüntüsü" loading="lazy" />
+            </div>
+            <div class="p-4">
+              <div class="chart-wrap">
+                <canvas id="priceChart" aria-label="Fiyat karşılaştırma grafiği" role="img"></canvas>
+              </div>
+              <p class="text-xs text-gray-400 mt-2">Grafik: Tek tek alım (~16.000₺) vs Paket (1.000₺).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16">
+    <div class="container-xl mx-auto px-4">
+      <div class="grid-auto">
+        <div class="glass rounded-xl p-6 border border-white/10">
+          <div class="text-3xl font-extrabold text-brand">16</div>
+          <div class="text-gray-300">Hazır QR Menü teması</div>
+        </div>
+        <div class="glass rounded-xl p-6 border border-white/10">
+          <div class="text-3xl font-extrabold text-brand">∞</div>
+          <div class="text-gray-300">Sınırsız kullanım / lisans yok</div>
+        </div>
+        <div class="glass rounded-xl p-6 border border-white/10">
+          <div class="text-3xl font-extrabold text-brand">%99</div>
+          <div class="text-gray-300">Ajans & freelance uyum</div>
+        </div>
+        <div class="glass rounded-xl p-6 border border-white/10">
+          <div class="text-3xl font-extrabold text-brand">24s</div>
+          <div class="text-gray-300">Hızlı teslim / indirme erişimi</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="paket" class="py-16">
+    <div class="container-xl mx-auto px-4">
+      <div class="md:flex items-end justify-between">
+        <div>
+          <p class="kicker">Paket İçeriği</p>
+          <h2 class="text-3xl md:text-4xl font-extrabold">16 Script — QR Menü Odaklı</h2>
+          <p class="text-gray-300 mt-2">Minimal, görselli, çok dilli ve hızlı yüklenen temalar bir arada. <span class="mark-brand">Tam liste</span> aşağıdaki demolarda.</p>
+        </div>
+        <a href="#satin-al" class="btn btn-outline-brand rounded-pill mt-4 md:mt-0">Paketi Al</a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mt-8">
+        <div class="space-y-6">
+          <div class="glass rounded-xl p-5 border border-white/10">
+            <h3 class="font-bold text-white flex items-center justify-between">Klasik & Minimal <span class="text-brand text-sm">8+</span></h3>
+            <ul class="mt-3 text-gray-300 text-sm list-check">
+              <li>Temiz tipografi, hızlı sayfa</li>
+              <li>Karanlık / aydınlık tema varyantları</li>
+              <li>QR ile anlık erişim</li>
+            </ul>
+          </div>
+          <div class="glass rounded-xl p-5 border border-white/10">
+            <h3 class="font-bold text-white flex items-center justify-between">Görselli & Fotoğraflı <span class="text-brand text-sm">4+</span></h3>
+            <ul class="mt-3 text-gray-300 text-sm list-check">
+              <li>Kategori görselleri, slider</li>
+              <li>Öne çıkanlar / kampanya alanları</li>
+            </ul>
+          </div>
+          <div class="glass rounded-xl p-5 border border-white/10">
+            <h3 class="font-bold text-white flex items-center justify-between">Çok Dilli & Modüler <span class="text-brand text-sm">4+</span></h3>
+            <ul class="mt-3 text-gray-300 text-sm list-check">
+              <li>TR/EN/AR çoklu dil desteği</li>
+              <li>Fiyat / ürün etiketleri</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="glass rounded-xl p-5 border border-white/10">
+            <h3 class="font-bold text-white flex items-center justify-between">Restoran & Kafe <span class="text-brand text-sm">Genel</span></h3>
+            <ul class="mt-3 text-gray-300 text-sm list-check">
+              <li>Menü kategorizasyon ve filtre</li>
+              <li>QR basımı için hazır görseller</li>
+            </ul>
+          </div>
+          <div class="glass rounded-xl p-5 border border-white/10">
+            <h3 class="font-bold text-white flex items-center justify-between">Performans <span class="text-brand text-sm">Önemli</span></h3>
+            <ul class="mt-3 text-gray-300 text-sm list-check">
+              <li>Hafif CSS/JS, CDN uyumu</li>
+              <li>Önbellek dostu yapı</li>
+            </ul>
+          </div>
+          <div class="glass rounded-xl p-5 border border-white/10">
+            <h3 class="font-bold text-white flex items-center justify-between">Geliştirilebilir <span class="text-brand text-sm">Açık Kaynak</span></h3>
+            <ul class="mt-3 text-gray-300 text-sm list-check">
+              <li>Özelleştirilebilir bileşenler</li>
+              <li>Örnek config & README</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="glass rounded-xl p-5 border border-white/10">
+            <h3 class="font-bold text-white flex items-center justify-between">Ödeme & Sipariş <span class="text-brand text-sm">Opsiyonel</span></h3>
+            <ul class="mt-3 text-gray-300 text-sm list-check">
+              <li>Sepet/WhatsApp sipariş entegrasyonu</li>
+              <li>Basit rezervasyon formları</li>
+            </ul>
+          </div>
+          <div class="glass rounded-xl p-5 border border-white/10">
+            <h3 class="font-bold text-white flex items-center justify-between">Güvenlik <span class="text-brand text-sm">Temel</span></h3>
+            <ul class="mt-3 text-gray-300 text-sm list-check">
+              <li>Env dosyaları & rate limit örn.</li>
+              <li>Yedekleme önerileri</li>
+            </ul>
+          </div>
+          <div class="glass rounded-xl p-5 border border-white/10">
+            <h3 class="font-bold text-white flex items-center justify-between">Kurulum Kolaylığı <span class="text-brand text-sm">Hızlı</span></h3>
+            <ul class="mt-3 text-gray-300 text-sm list-check">
+              <li>1-2 dakikada ayağa kaldır</li>
+              <li>Paylaşımlı host uyumlu</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider my-10"></div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="glass rounded-xl p-6 border border-white/10">
+          <h3 class="text-xl font-bold">Teslimat</h3>
+          <p class="text-gray-300 mt-2">Ödeme sonrası <b>indirme linki</b> ve <b>kurulum dökümanı</b> anında e-posta/mesaj ile gönderilir. Dosyalar ZIP şeklinde, her proje klasörü kendi README’siyle gelir.</p>
+        </div>
+        <div class="glass rounded-xl p-6 border border-white/10">
+          <h3 class="text-xl font-bold">Kullanım Hakları</h3>
+          <p class="text-gray-300 mt-2">Açık kaynak; sınırsız projede kullanabilir, müşterine özelleştirip teslim edebilirsin. <b>Toplu yeniden dağıtım</b> / indirilebilir link paylaşımı yasaktır.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMOLAR -->
+  <section id="demolar" class="py-16">
+    <div class="container-xl mx-auto px-4">
+      <p class="kicker">Demolar</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold">Tüm Demo Linkleri</h2>
+      <div id="demolar-grid" class="grid-auto mt-6"></div>
+      <div class="text-center mt-8">
+        <button id="loadMore" class="btn btn-outline-brand rounded-pill px-4 py-2">Daha Fazla Göster</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="satin-al" class="py-16">
+    <div class="container-xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="order-2 md:order-1">
+          <p class="kicker">Tek Paket</p>
+          <h2 class="text-3xl md:text-4xl font-extrabold">16 Script QR Menü Paketi</h2>
+          <p class="text-gray-300 mt-3">Sınırlı süre kampanya: <span class="mark-brand">1.000 TL</span>. Normalde parça parça alımla 16.000₺+ maliyet.</p>
+          <ul class="list-check mt-4 text-gray-300">
+            <li>16 proje klasörü</li>
+            <li>Açık kaynak / lisans yok</li>
+            <li>Güncellenebilir modüler yapı</li>
+          </ul>
+          <div class="mt-6 flex gap-3 flex-wrap">
+            <a class="btn btn-outline-brand rounded-pill" href="https://wa.me/12513160268?text=Merhaba%2C%20QR%20Men%C3%BC%2016%E2%80%99l%C4%B1%20Paket%20(1.000%20TL)%20hakk%C4%B1nda%20sorular%C4%B1m%20var" target="_blank" rel="nofollow noopener"><i class="bi bi-whatsapp me-1"></i>WhatsApp</a>
+            <a class="btn btn-outline-brand rounded-pill" href="https://t.me/mebularts" target="_blank" rel="nofollow noopener"><i class="bi bi-telegram me-1"></i>Telegram</a>
+          </div>
+          <p class="text-xs text-gray-400 mt-3">KDV bilgileri ve fatura talepleriniz için iletişime geçin.</p>
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="glass rounded-2xl p-6 border border-white/10">
+            <table class="table table-dark table-striped align-middle text-sm">
+              <tbody>
+                <tr><th scope="row">Paket</th><td>16 Adet Premium PHP Script (QR Menü)</td></tr>
+                <tr><th scope="row">Kapsam</th><td>Restoran & Kafe için QR Menü temaları</td></tr>
+                <tr><th scope="row">Lisans</th><td>Lisans yok / sınırsız kullanım</td></tr>
+                <tr><th scope="row">Teslim</th><td>İndirme linki (ZIP) + kurulum dökümanı</td></tr>
+                <tr><th scope="row">Fiyat</th><td class="text-brand fw-bold">1.000 TL</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sss" class="py-16">
+    <div class="container-xl mx-auto px-4">
+      <p class="kicker">Sık Sorulan Sorular</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold">Merak Ettiklerin</h2>
+      <div class="accordion mt-6" id="faq">
+        <div class="accordion-item bg-transparent border border-white/10">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#f1" aria-expanded="false" aria-controls="f1">
+              Lisans var mı? Kaç projede kullanabilirim?
+            </button>
+          </h2>
+          <div id="f1" class="accordion-collapse collapse" data-bs-parent="#faq">
+            <div class="accordion-body text-gray-300">Lisans yoktur. Sınırsız sayıda projede kullanabilir, müşterilerinize özelleştirip teslim edebilirsiniz. Toplu yeniden dağıtım (paketin tamamını linkle paylaşma) yasaktır.</div>
+          </div>
+        </div>
+        <div class="accordion-item bg-transparent border border-white/10 mt-3">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#f2" aria-expanded="false" aria-controls="f2">
+              Ödeme sonrası nasıl teslim ediliyor?
+            </button>
+          </h2>
+          <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faq">
+            <div class="accordion-body text-gray-300">Ödeme onayından sonra e-posta/mesaj olarak <b>indirme linki</b> ve <b>kurulum dökümanı</b> gönderilir. FAST/USDT/BTC kabul edilir.</div>
+          </div>
+        </div>
+        <div class="accordion-item bg-transparent border border-white/10 mt-3">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#f3" aria-expanded="false" aria-controls="f3">
+              Destek veriyor musunuz?
+            </button>
+          </h2>
+          <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faq">
+            <div class="accordion-body text-gray-300">Kurulum dökümanı ve örnek config dosyaları dahildir. İleri düzey özelleştirmeler için ek hizmet sunulabilir.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container-xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-extrabold">Fiyat artmadan paketi kap!</h2>
+      <p class="text-gray-300 mt-2">Ajans ve freelancer portföyünü 16 hazır projeyle büyüt.</p>
+      <div class="mt-6 flex gap-3 justify-center">
+        <a href="https://wa.me/12513160268" target="_blank" class="btn btn-brand btn-lg rounded-pill" rel="nofollow noopener">Şimdi Satın Al</a>
+        <a href="https://wa.me/12513160268" class="btn btn-outline-brand rounded-pill" target="_blank" rel="nofollow noopener"><i class="bi bi-whatsapp me-1"></i>WhatsApp</a>
+        <a href="https://t.me/mebularts" class="btn btn-outline-brand rounded-pill" target="_blank" rel="nofollow noopener"><i class="bi bi-telegram me-1"></i>Telegram</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/10 py-10 text-sm text-gray-400">
+    <div class="container-xl mx-auto px-4">
+      <div class="md:flex items-center justify-between">
+        <div>© <span id="yil"></span> QR Menü 16'lı Paket — Tüm hakları saklıdır.</div>
+        <div class="flex gap-4 mt-3 md:mt-0">
+          <a class="hover:text-white" href="#">Gizlilik</a>
+          <a class="hover:text-white" href="#">Kullanım Koşulları</a>
+          <a class="hover:text-white" href="#">İade Politikası</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Product JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "QR Menü — 16 Adet Premium PHP Script Paketi",
+    "description": "Restoran ve kafe odaklı 16 adet açık kaynak QR Menü teması.",
+    "brand": {"@type":"Brand","name":"Mebularts"},
+    "image": "https://mebularts.github.io/QR-Menu-16-Pack/assets/og-qrmenu-16.png",
+    "offers": {
+      "@type": "Offer",
+      "price": "1000",
+      "priceCurrency": "TRY",
+      "availability": "https://schema.org/InStock",
+      "url": "https://mebularts.github.io/QR-Menu-16-Pack/"
+    }
+  }
+  </script>
+
+  <!-- FAQ JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Lisans var mı? Kaç projede kullanabilirim?","acceptedAnswer":{"@type":"Answer","text":"Lisans yoktur. Sınırsız sayıda projede kullanabilir, müşterilerinize özelleştirip teslim edebilirsiniz. Toplu yeniden dağıtım (paketin tamamını linkle paylaşma) yasaktır."}},
+      {"@type":"Question","name":"Ödeme sonrası nasıl teslim ediliyor?","acceptedAnswer":{"@type":"Answer","text":"Ödeme onayından sonra e-posta/mesaj olarak indirme linki ve kurulum dökümanı gönderilir. FAST/USDT/BTC desteklenir."}},
+      {"@type":"Question","name":"Destek veriyor musunuz?","acceptedAnswer":{"@type":"Answer","text":"Kurulum dökümanı ve örnek config dosyaları dahildir. İleri düzey özelleştirmeler için ek hizmet sunulabilir."}}
+    ]
+  }
+  </script>
+
+  <!-- Demo grid script -->
+  <script>
+  (async () => {
+    const DATA_URL = 'demolar.json';
+    const PLACEHOLDER_IMG = 'https://via.placeholder.com/640x400?text=Demo';
+    const grid = document.getElementById('demolar-grid');
+    const btnMore = document.getElementById('loadMore');
+    const PAGE_SIZE = 24;
+    let data = [], filtered = [], cursor = 0;
+
+    const card = (item) => {
+      const name = (item.name || '').toString();
+      const demo = (item.demo || '').toString();
+      const img  = (item.image && item.image.trim() !== '' ? item.image : PLACEHOLDER_IMG);
+      return `
+        <div class="glass rounded-xl overflow-hidden border border-white/10 shadow-brand flex flex-col">
+          <a href="${demo}" target="_blank" rel="nofollow noopener" aria-label="${name}">
+            <img class="scrn" src="${img}" alt="${name}" loading="lazy" width="640" height="400" />
+          </a>
+          <div class="p-4 flex-1 flex flex-col">
+            <h3 class="font-semibold text-white text-base mb-3" title="${name}">${name}</h3>
+            <div class="mt-auto">
+              <a href="${demo}" target="_blank" rel="nofollow noopener" class="btn btn-brand rounded-pill px-3 py-2">İncele</a>
+            </div>
+          </div>
+        </div>`;
+    };
+
+    function renderMore(reset=false){
+      if(reset){ grid.innerHTML=''; cursor=0; }
+      const next = filtered.slice(cursor, cursor+PAGE_SIZE);
+      grid.insertAdjacentHTML('beforeend', next.map(card).join(''));
+      cursor += next.length;
+      btnMore.style.display = cursor < filtered.length ? 'inline-block' : 'none';
+    }
+
+    try{
+      const res = await fetch(DATA_URL, { cache:'no-store' });
+      if(!res.ok) throw new Error('JSON okunamadı');
+      data = await res.json();
+      data = data.map(it => ({
+        name: it.name ?? it['Yazılım Adı'] ?? it['ad'] ?? '',
+        demo: it.demo ?? it['Demo Linki'] ?? '',
+        image: it.image ?? it['Görsel Linki'] ?? ''
+      })).filter(it => it.name && it.demo);
+      filtered = data.slice();
+      renderMore(true);
+    }catch(e){
+      console.error(e);
+      grid.innerHTML = '<div class="text-gray-400">Demolar yüklenemedi. Lütfen daha sonra tekrar deneyin.</div>';
+      btnMore.style.display = 'none';
+    }
+
+    btnMore?.addEventListener('click', () => renderMore(false));
+  })();
+  </script>
+
+  <!-- yıl, grafik ve responsive/SSS fixleri -->
+  <script>
+    document.getElementById('yil')?.textContent = new Date().getFullYear();
+    window.addEventListener('load', () => {
+      const ctx = document.getElementById('priceChart');
+      if (!ctx) return;
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Parça Parça Alım', 'Paket'],
+          datasets: [{ label: 'Tahmini Toplam Maliyet (₺)', data: [16000, 1000], borderWidth: 1 }]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          scales: { y: { beginAtZero: true } },
+          plugins: { legend: { display: false } }
+        }
+      });
+    });
+  </script>
+
+  <style id="responsive-override">
+    img, video, canvas, svg, iframe { max-width:100% !important; width:100% !important; height:auto !important; display:block !important; }
+    .container, .container-xl, .container-fluid { width:100% !important; }
+    .hero-card, .scrn { width:100% !important; max-width:100% !important; }
+    .chart-wrap { width:100% !important; height:220px !important; }
+    @media (min-width:640px){ .chart-wrap{ height:260px !important; } }
+  </style>
+  <style id="bs-collapse-fix">
+    .collapse { visibility: visible !important; }
+    .collapse:not(.show) { display: none !important; }
+    .collapse.show { display: block !important; }
+    .accordion-button { background: transparent !important; color: #fff !important; }
+    .accordion-button:focus { box-shadow: 0 0 0 .25rem rgba(var(--brand-rgb),.28) !important; }
+    .accordion-item { background: transparent !important; }
+  </style>
+
+</body>
+</html>
